@@ -7,7 +7,7 @@ function mailmeotp(userEmail){
         port: 465,
         secure: true,
         auth:{
-            user: "nishantjain409@gmail.com",
+            user: "//your email id",
             pass: process.env.PASS // app password 
         }
     })
@@ -19,16 +19,16 @@ function mailmeotp(userEmail){
     const newOTP=makeMyOTP(6); //(6) 6-digit otp
     // mail construction
     const mail={
-        from: "nishantjain409@gmail.com",
+        from: "//your email id",
         to: userEmail,
         subject: "Verify Your Account",
-        text: "Nishant jain ne otp bejha hai"+newOTP
+        text: "your otp is"+newOTP
     }
     
     //send mail
     transporter.sendMail(mail,(error,info)=>{
         if(error) {
-            console.log("Error aagya so called developer , nishant jain se puche error");
+            console.log("error");
         }
         else{
             console.log("email sent: "+ info.response);
