@@ -50,7 +50,7 @@ app.post("/verifyotp",async(req,res)=>{
   const userOTP=req.body.otp;
   const user= await collection.findOne({email : userEmail});
   if((user.otp==userOTP) && (new Date()-user.otpCreatedAt<= (300 * 1000))){
-    res.send("Naman Rohilla welcomes you " + Onetime);
+    res.send(" welcome " + Onetime);
   }
   else{
     res.send("OTP entered is not correct");
