@@ -55,7 +55,7 @@
     
 </head>
 <body>
-    <p>inbox aur spam check kre otp ke liye  -> <%= userEmail %> </p> 
+    <p>check your inbox and spam for otp   -> <%= userEmail %> </p> 
     <form action="/verifyotp" method="post">
         <input type="hidden" name="userEmail" value="<%= userEmail %>">
         <input type="password" name="otp" placeholder="Enter Your OTP" required autocomplete="off">
